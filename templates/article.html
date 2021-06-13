@@ -1,5 +1,57 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-    <h1>{{id}}</h1>
+    <div class="container">
+        <div class="row row-content">
+            <div class="col-12">
+                <h1 class="article-title">{{ article.title }}</h1>
+            </div>
+        </div>
+        <div class="row row-content">
+            <div class="col-12">
+                <p class="article-author">- {{ article.author }}</h1>
+            </div>
+        </div>
+        <div class="row row-content">
+            <div class="col-12 col-sm-6">
+                <a target="_blank" href="{{ article.instagram }}">
+                    <img src="{{ url_for('static', filename = 'images/insta.png') }}" alt="Instagram">
+                </a>
+                <a target="_blank" href="{{ article.twitter }}">
+                    <img src="{{ url_for('static', filename = 'images/twitter.png') }}" alt="Twitter">
+                </a>
+                <a target="_blank" href="{{ article.linkedin }}">
+                    <img src="{{ url_for('static', filename = 'images/linkedin.png') }}" alt="LinkedIn">
+                </a>
+            </div>
+            <div class="col-6">
+                    <p class="date">
+                        {{ article.createdate.strftime("%d") }} {{ article.createdate.strftime("%B") }} {{ article.createdate.strftime("%Y") }}
+                        ,
+                        {{ article.createdate.strftime("%I") }}:{{ article.createdate.strftime("%M") }} {{ article.createdate.strftime("%p") }}
+                    </p>
+            </div>
+            <!-- <div class="col-12 col-sm-6 social-media">
+                <a href="https://instagram.com/_anukulSingh">
+                    <img src="{{ url_for('static', filename = 'images/insta.png') }}" alt="Instagram">
+                </a>
+                <a href="https://twitter.com/_anukulSingh">
+                    <img src="{{ url_for('static', filename = 'images/twitter.png') }}" alt="Instagram">
+                </a>
+                <a href="https://linkedin.com/_anukulSingh">
+                    <img src="{{ url_for('static', filename = 'images/linkedin.png') }}" alt="Instagram">
+                </a>
+            </div> -->
+        </div>
+    </div>
+    
+    <hr/>
+    <div class="container">
+        <div class="row row-content">
+            <div class="article-body">
+                {{ article.body | safe }}
+            </div>
+        </div>
+    </div>
+    
 {% endblock %}

@@ -1,6 +1,45 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-    <h1>About us</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quis voluptas illum saepe, doloremque, culpa officiis ex pariatur at eaque ullam sit? Dolorem optio error iure aspernatur deserunt ab repellat!</p>
+<div class="container">
+    <div class="row row-content">
+        <div class="col-12 col-sm-6">
+            <h1>About the developer</h1>
+            <p>Hello there, hope you enjoy the site</p>
+            <p>This blog site has been developed by <a target="_blank" href="https://anukul-portfolio.netlify.app/">Anukul Kumar</a></p>
+            <p>built upon Python's Flask framework and MySQL</p>
+            <p>The source code is available on <a target="_blank" href="https://github.com">Github</a></p>
+        </div>
+        <div class="col-12 col-sm-6">
+            <img src="{{ url_for('static', filename = 'images/anukul.jpg') }}" alt="Anukul Kumar"><br/>
+            
+        <div class="links">
+            <a target="_blank" href="https://instagram.com/_anukulSingh">
+                <img src="{{ url_for('static', filename = 'images/insta.png') }}" alt="Instagram">
+            </a>
+            <a target="_blank" href="https://messenger.com/_anukulSingh">
+                <img src="{{ url_for('static', filename = 'images/messenger.png') }}" alt="messenger">
+            </a>
+            <a target="_blank" href="https://www.facebook.com/anukulsingh678">
+                <img src="{{ url_for('static', filename = 'images/facebook.png') }}" alt="facebook">
+            </a>
+            <a target="_blank" href="https://github.com/anukulSingh">
+                <img src="{{ url_for('static', filename = 'images/github.png') }}" alt="Github">
+            </a>
+            <a target="_blank" href="https://twitter.com/AnukulK34195260">
+                <img src="{{ url_for('static', filename = 'images/twitter.png') }}" alt="Twitter">
+            </a>
+            <a target="_blank" href="https://www.reddit.com/user/crab125">
+                <img src="{{ url_for('static', filename = 'images/reddit.png') }}" alt="Reddit">
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/anukul-kumar-51360519b/">
+                <img src="{{ url_for('static', filename = 'images/linkedin.png') }}" alt="Linkedin">
+            </a><br/>
+            <!-- <a target="_blank" href="mailto:anukulsingh125@gmail.com">Mail</a> -->
+        </div>
+        </div>
+    </div>
+    
+</div>
+  
 {% endblock %}
